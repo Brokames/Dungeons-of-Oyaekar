@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -18,16 +19,15 @@ private:
 
 class Playable: public Entity{
 public:
-    Playable(int, int, int, int, int, int, int, int, int, char, const string&);  //initializes characters stats (HP, MP, Str (strength), Spd (speed), Intel(intelligence), Accureacy, and what
-                                                                                //the spec(specialization: warrior, mage, or rogue) is). Also sets the Exp of the character along with their
-                                                                                //base inventory space
+    Playable(int, int, int, int, int, int, int, int, int, const string&);  //initializes characters stats (HP, MP, Str (strength), Spd (speed), Intel(intelligence), Accuracy.
+                                                                                // Also sets the Exp of the character along with their base inventory space
+                                                                                
 protected:
-    Item **Inventory; //heterogeneous list to point to items in characters inventory
-    Item Armor, Weapon, OffHand;
+    Vector<Item*> Inventory(5); //heterogeneous list to point to items in characters inventory
+    Item Armor, OnHand, OffHand;
 private:
-    char Spec;  //stores the specialization of the character
-    int MaxHP, MaxMP, Str, Spd, Intel, Accuracy;
-    int CurrExp, MaxExp, InvSpace;  //CurrExp stores how much exp the characrter currently has, MaxExp stores The exp needed to level up, and InvSpace stores the current inventory space
+    int CurrExp, MaxExp, InvSpace, Level;  //CurrExp stores how much exp the characrter currently has, MaxExp stores The exp needed to level up, 
+                                           //,InvSpace stores the current inventory space and Level stores the characters current level
 };
 
 class NonPlayable: public Entity{
