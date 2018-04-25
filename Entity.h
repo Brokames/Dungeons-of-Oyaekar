@@ -11,6 +11,12 @@ class Entity {
 public:
     Entity(const string&);  //initializes name for character
     string GetName() const;
+    int GetHP();
+    int GetMP();
+    int GetStr();
+    int GetSpd();
+    int GetIntel();
+    int GetAccuracy();
 protected:
     int MaxHP, MaxMP, Str, Spd, Intel, Accuracy, ; //stats for characters
 private:
@@ -21,13 +27,6 @@ class Playable: public Entity{
 public:
     Playable(int, int, int, int, int, int, int, int, int, const string&);  //initializes characters stats (HP, MP, Str (strength), Spd (speed), Intel(intelligence), Accuracy.
                                                                            // Also sets the Exp of the character along with their base inventory space
-    int GetHP();
-    int GetMP();
-    int GetStr();
-    int GetSpd();
-    int GetIntel();
-    int GetAccuracy();
-    
 protected:
     Vector<Item*> Inventory(5); //heterogeneous list to point to items in characters inventory
     Item Armor, OnHand, OffHand;
