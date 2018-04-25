@@ -9,12 +9,14 @@ using namespace std;
 
 class Game {
 public:
-    Game();               //Creates a set of blank players and maps
+    Game();               //Loads in data from file
     void PlayNewGame();   //Places a blank new character and new map in chosen slot
+    void SaveGame();      //To be used in game to save data
     void LoadGame();      //Loads into a already created character and map
 private:
     Playable* p[3];
-    Map* m[3];
+    Global g[3];
 };
+
 
 #endif //_GAME_H
