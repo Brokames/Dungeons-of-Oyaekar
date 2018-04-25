@@ -32,19 +32,19 @@ private:
 
 class Wearable: public Item{
 public:
-    Wearable(int, int, int, int, int, const string&);     //Stat setting and Name
+    Wearable(int, int, int, int, int, int, int, const string&);     //Stat setting and Name
 private:
 };
 
 class OnHand: public Item{
 public:
-    OnHand(int, int, int, int, int, const string&);     //Stat setting and Name
+    OnHand(int, int, int, int, int, int, int, const string&);     //Stat setting and Name
 private:
 };
 
 class OffHand: public Item{
 public:
-    OffHand(int, int, int, int, int, const string&);     //Stat setting and Name
+    OffHand(int, int, int, int, int, int, int, const string&);     //Stat setting and Name
 private:
 };
 
