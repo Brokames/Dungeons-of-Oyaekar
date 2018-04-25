@@ -20,7 +20,7 @@ private:
 class Playable: public Entity{
 public:
     Playable(int, int, int, int, int, int, int, int, int, const string&);  //initializes characters stats (HP, MP, Str (strength), Spd (speed), Intel(intelligence), Accuracy.
-                                                                                // Also sets the Exp of the character along with their base inventory space
+                                                                           // Also sets the Exp of the character along with their base inventory space
     int GetHP();
     int GetMP();
     int GetStr();
