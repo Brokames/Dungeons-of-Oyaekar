@@ -13,6 +13,7 @@ public:
     void PlayNewGame();   //Places a blank new character and new map in chosen slot
     void SaveGame();      //To be used in game to save data
     void LoadGame();      //Loads into a already created character and map
+    void EraseGame();     //Erases data stored in objects
 private:
     Playable* p[3];
     Global g[3];
