@@ -9,14 +9,14 @@ Ability::Ability(const string& N, const string& D, int AD, int SP){
   SpellPower = SP;
 }
 
-string Ability::GetName()
-{ return Name; }
+string Ability::GetName(){ 
+  return Name; }
 
-string Ability::GetDescription()
-{ return Description; }
+string Ability::GetDescription(){
+  return Description; }
 
-int Ability::GetPhyPow()
-{ return Attack; }
+int Ability::GetPhyPow(){ 
+  return Attack; }
 
-int Ability::GetSpellPow()
-{ return SpellPower; }
+int Ability::GetSpellPow(){
+  return SpellPower; }
