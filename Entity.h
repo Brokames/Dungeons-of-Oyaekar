@@ -17,8 +17,10 @@ public:
     int GetSpd();
     int GetIntel();
     int GetAccuracy();
+    int GetLevel();
+   
 protected:
-    int MaxHP, MaxMP, Str, Spd, Intel, Accuracy, ; //stats for characters
+    int MaxHP, MaxMP, Str, Spd, Intel, Accuracy, Level; //stats for characters
 private:
     string Name;
 };
@@ -29,13 +31,13 @@ public:
                                                                            // Also sets the Exp of the character along with their base inventory space
     int GetCurrExp();
     int GetMaxExp();
-    int Level();
+    
 protected:
     Vector<Item*> Inventory(5); //heterogeneous list to point to items in characters inventory
     Item Armor, OnHand, OffHand;
 private:
     char Spec;
-    int CurrExp, MaxExp, InvSpace, Level;  //CurrExp stores how much exp the characrter currently has, MaxExp stores The exp needed to level up, 
+    int CurrExp, MaxExp, InvSpace;  //CurrExp stores how much exp the characrter currently has, MaxExp stores The exp needed to level up, 
                                            //,InvSpace stores the current inventory space and Level stores the characters current level
 };
 
@@ -46,6 +48,18 @@ protected:
 private:
 };
 
+class Hostile: public NonPlayable{
+public:
+    Hostile();
+private:
+};
+
+class NonHostile: public NonPlayable{
+public:
+    NonHostile();
+private:
+};
+   
 class Warrior: public Playable{
   public:
   private:
